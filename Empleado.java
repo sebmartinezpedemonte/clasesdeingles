@@ -20,6 +20,9 @@ public class Empleado {
         this.dioExamenEscrito = dioExamenEscrito;
     }
 
+    public Empleado() {
+    }
+
     public String getNombre(String nombre) {
         return this.nombre;
     }
@@ -36,23 +39,27 @@ public class Empleado {
         return notaExamenEscrito;
     }
 
-    public String toString2(){
-        return nombre;
 
+    public String retornarNombre() {
+        return nombre;
+    }
+
+    public boolean mismoNombre(String nombre) {
+        if (this.nombre == nombre) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public String toString() {
-        if(dioExamenEscrito){
+        if (dioExamenEscrito) {
             return
-                    nombre +  ", nivel oral de ingles " + nivelOralDeIngles +
-                    " y nota de examen escrito de " + notaExamenEscrito;
-
-        }else
-
-        return nombre +  ", nivel oral de Ingles " + nivelOralDeIngles + " y quien no rindio el examen escrito.";
+                    nombre + ", nivel oral de ingles " + nivelOralDeIngles +
+                            " y nota de examen escrito de " + notaExamenEscrito;
+        } else
+            return nombre + ", nivel oral de Ingles " + nivelOralDeIngles + " y quien no rindio el examen escrito";
     }
-
-
-
 }
+

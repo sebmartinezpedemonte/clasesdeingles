@@ -16,10 +16,15 @@ public class Main {
         areaIngles.mostrarInformacionEmpleado("Juan Perez");
         areaIngles.mostrarEmpleadosSegunNivel(NivelOralDeIngles.AVANZADO);
         areaIngles.removerEmpleado("Juan Perez");
+        areaIngles.agregarEmpleadosDesdeCeroConExamen("Ana Gutierrez", NivelOralDeIngles.AVANZADO, true, 9.9);
+        areaIngles.agregarEmpleadosDesdeCeroSinExamen("Tomas Gonzalez", NivelOralDeIngles.ELEMENTAL,false);
 
         areaIngles.mostrarEmpleadosSegunNivel(NivelOralDeIngles.AVANZADO);
 
         areaIngles.mostrarTodosLosEmpleados();
+        System.out.println(
+                areaIngles.buscarEmpleadoPorNombre("Ana Gutierre")
+        );
 
     }
 }
